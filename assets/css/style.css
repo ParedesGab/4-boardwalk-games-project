@@ -6,8 +6,10 @@
 :root {
     --primary-font: "Inter", sans-serif;
     --secondary-font: "Macondo", cursive;
-    --primary-color: #416a8e;
-    /* blue*/
+    --primary-color: #416a8e;   /* blue*/
+    --secondary-color:#aa9581; /* ligth brown */
+    --highlight-color:#416a8e; 
+    --highlight-color-light:#7a9fc2;
 }
 
 /* Global styles but calling the CSS variables */
@@ -23,6 +25,17 @@ h3 {
     color: var(--primary-color);
 }
 
-p {
-    border: 2px solid var(--primary-color);
+.sub-heading-color {
+    color: var(--highlight-color);
+}
+
+.container, 
+.row {
+    border: 2px solid black;
+}
+
+.col-12 {
+    border: 2px solid white;
+    background-color: lightgray;
+
 }
