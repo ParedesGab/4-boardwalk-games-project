@@ -6,10 +6,12 @@
 :root {
     --primary-font: "Inter", sans-serif;
     --secondary-font: "Macondo", cursive;
-    --primary-color: #416a8e;   /* blue*/
-    --secondary-color:#aa9581; /* ligth brown */
-    --highlight-color:#416a8e; 
-    --highlight-color-light:#7a9fc2;
+    --primary-color: rgb(73, 2, 2);
+    /* blue*/
+    --secondary-color: #aa9581;
+    /* ligth brown */
+    --highlight-color: #416a8e;
+    --highlight-color-light: #7a9fc2;
 }
 
 /* Global styles but calling the CSS variables */
@@ -23,15 +25,31 @@ h2,
 h3 {
     font-family: var(--secondary-font);
     color: var(--primary-color);
+    text-transform: uppercase;
+    /*this is to make the title upper case */
 }
 
 .sub-heading-color {
     color: var(--highlight-color);
 }
 
+.section {         /* the class section is here in the Global styles, because it will be reused*/
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Navbar */
 #navbar {
     background-color: var(--primary-color);
 }
+
 #navbar .logo {
     width: 30px;
+}
+
+/* Header */
+
+/* How to best target the lead text? Create an id for header and combine it with the lead class */
+#header .lead {
+    font-family: var(--secondary-font);
 }
