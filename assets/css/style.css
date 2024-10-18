@@ -25,15 +25,31 @@ h2,
 h3 {
     font-family: var(--secondary-font);
     color: var(--primary-color);
+}
+
+h1,
+h2 {
     text-transform: uppercase;
     /*this is to make the title upper case */
 }
+
+/* Add a margin bottom only to the h2 */
+h2 {
+    margin-bottom: 2rem;
+}
+
+/* This is one way to overwrite the general style of text-transform in case it was inside h1, h2, and h3.
+ But as you can see above CI separated the headings
+h3 {
+    text-transform: capitalize;
+}*/
 
 .sub-heading-color {
     color: var(--highlight-color);
 }
 
-.section {         /* the class section is here in the Global styles, because it will be reused*/
+.section {
+    /* the class section is here in the Global styles, because it will be reused*/
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -52,4 +68,46 @@ h3 {
 /* How to best target the lead text? Create an id for header and combine it with the lead class */
 #header .lead {
     font-family: var(--secondary-font);
+}
+
+/* Services (insted of writing Main, write Services */
+/* We can use the id Services and the class card-footer to style the footer of the cards*/
+#services .card-footer {
+    font-weight: bold;
+    /* this makes the text bold*/
+    color: var(--highlight-color);
+    background-color: transparent;
+}
+
+/* Target the margin of the cards and that they all have the same heigth */
+#services .card {
+    margin-bottom: 1.5rem;
+    /* these adds spaces between the cards */
+}
+
+/* the heights are inconsisten across the different devices*/
+/* But actually it only looks different in tablets up , not in mobiles*/
+/* Thus, we add a media query for Tablets and up so cards have a consistent heigth. 
+Note, I tried to adjusting the class card height but then the footer was not consitent. Thus, 
+what CI do is they target the card-body class instead, which is the text inside the card that will push the footer down */
+/* How CI writes it: Medium devices (tablets, 768 px and up)*/
+@media screen and (min-width : 768px) {
+    #services .card-body {
+        min-height: 191px; /* Initially I tried with 180o px but that value was not quite right, because the cards
+        still looked incosistent. Thus use devtools and scroll with the mouse
+        until you find the rigth value */
+    }
+}
+
+/* From laptops on, there is too much space between the service card body text and the footer */
+/* CI wrote: Large devices (small laptops, 992 px and up) */
+@media screen and (min-width : 992px) {
+    #services .card-body {
+        min-height: auto; /*this removes the margin*/
+    }
+}
+@media screen and (min-width : 1200px) {
+    #services .card-body {
+        min-height: 195px; /*this removes the margin*/
+    }
 }
