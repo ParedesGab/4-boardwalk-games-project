@@ -80,10 +80,22 @@ h3 {
 }
 
 /* Target the margin of the cards and that they all have the same heigth */
-#services .card {
+#services .card,  {
     margin-bottom: 1.5rem;
     /* these adds spaces between the cards */
 }
+
+#new-games .card  {
+    margin-bottom: 1.5rem;
+    /* these adds spaces between the cards */
+}
+
+#fav-games .card  {
+    margin-bottom: 1.5rem;
+    /* these adds spaces between the cards */
+}
+
+
 
 /* the heights are inconsisten across the different devices*/
 /* But actually it only looks different in tablets up , not in mobiles*/
