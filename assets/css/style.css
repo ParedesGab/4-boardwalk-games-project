@@ -80,17 +80,18 @@ h3 {
 }
 
 /* Target the margin of the cards and that they all have the same heigth */
-#services .card,  {
+#services .card,
+    {
     margin-bottom: 1.5rem;
     /* these adds spaces between the cards */
 }
 
-#new-games .card  {
+#new-games .card {
     margin-bottom: 1.5rem;
     /* these adds spaces between the cards */
 }
 
-#fav-games .card  {
+#fav-games .card {
     margin-bottom: 1.5rem;
     /* these adds spaces between the cards */
 }
@@ -98,16 +99,16 @@ h3 {
 /* Footer */
 #contact {
     background-color: var(--primary-color);
-    color:white;
+    color: white;
     padding-bottom: 3rem;
 }
 
 #contact h2 {
-    color:white;
+    color: white;
 }
 
 #contact .sub-heading-color {
-    color:var(--highlight-color-light)
+    color: var(--highlight-color-light)
 }
 
 #contact i {
@@ -128,8 +129,41 @@ h3 {
 
 /* Style Opening section using a BS class for tables */
 #contact .table-dark * {
-    background-color: transparent; /*note that this did not work*/
+    background-color: transparent;
+    /*note that this did not work*/
 }
+
+/* Nav buttons (Note that CI places this above the Navbar */
+.custom-button-filled {
+    border: 2px solid var(--highlight-color);
+    background-color: var(--highlight-color);
+    color: white;
+    /* text color */
+}
+
+/* hover styles for the nav button */
+.custom-button-filled:hover {
+    border: 2px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: white;
+    /* text color */
+}
+
+/* Header buttons (Note that CI places this above the Navbar */
+.custom-button-outline {
+    border: 3px solid var(--highlight-color);
+    color: var(--highlight-color);
+    /* text color */
+    padding: 7px 25px;
+}
+
+/* Hover styles for the header button */
+.custom-button-outline:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+
 
 
 /* the heights are inconsisten across the different devices*/
@@ -140,7 +174,8 @@ what CI do is they target the card-body class instead, which is the text inside 
 /* How CI writes it: Medium devices (tablets, 768 px and up)*/
 @media screen and (min-width : 768px) {
     #services .card-body {
-        min-height: 191px; /* Initially I tried with 180o px but that value was not quite right, because the cards
+        min-height: 191px;
+        /* Initially I tried with 180o px but that value was not quite right, because the cards
         still looked incosistent. Thus use devtools and scroll with the mouse
         until you find the rigth value */
     }
@@ -150,11 +185,14 @@ what CI do is they target the card-body class instead, which is the text inside 
 /* CI wrote: Large devices (small laptops, 992 px and up) */
 @media screen and (min-width : 992px) {
     #services .card-body {
-        min-height: auto; /*this removes the margin*/
+        min-height: auto;
+        /*this removes the margin*/
     }
 }
+
 @media screen and (min-width : 1200px) {
     #services .card-body {
-        min-height: 195px; /*this removes the margin*/
+        min-height: 195px;
+        /*this removes the margin*/
     }
 }
