@@ -18,7 +18,8 @@
 
 body {
     font-family: var(--primary-font);
-    padding-top:57.15px; /* This is because I added the class fixed-top to the nav.*/
+    padding-top: 57.15px;
+    /* This is because I added the class fixed-top to the nav.*/
 }
 
 h1,
@@ -72,6 +73,13 @@ h3 {
 }
 
 /* Services (insted of writing Main, write Services */
+
+#services {
+    padding-top: 4rem;
+    /*prevent navbar overlap*/ /*this is so the services heading is visible after you click on services in the navbar, note that if you target only the heading then
+    only the heading will move, but you want that the whole section moves*/
+}
+
 /* We can use the id Services and the class card-footer to style the footer of the cards*/
 #services .card-footer {
     font-weight: bold;
@@ -86,6 +94,7 @@ h3 {
     margin-bottom: 1.5rem;
     /* these adds spaces between the cards */
 }
+
 
 /* Events */
 
@@ -195,10 +204,12 @@ h3 {
 
 /* Small screens and up */
 @media screen and (min-width: 576px) {
+
     /* increase font size in events table when screen size is large enough */
     #events .table {
         font-size: 1rem;
     }
+
     .student-discount {
         font-size: 1rem;
     }
