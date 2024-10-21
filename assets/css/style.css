@@ -126,6 +126,12 @@ h3 {
     color: var(--secondary-color);
 }
 
+/* Style Opening section using a BS class for tables */
+#contact .table-dark * {
+    background-color: transparent; /*note that this did not work*/
+}
+
+
 /* the heights are inconsisten across the different devices*/
 /* But actually it only looks different in tablets up , not in mobiles*/
 /* Thus, we add a media query for Tablets and up so cards have a consistent heigth. 
