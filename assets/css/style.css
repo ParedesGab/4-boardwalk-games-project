@@ -18,7 +18,7 @@
 
 body {
     font-family: var(--primary-font);
-    padding-top:57.15px; /* This is because I added the class fixed-top to the nav.
+    padding-top:57.15px; /* This is because I added the class fixed-top to the nav.*/
 }
 
 h1,
